@@ -1,0 +1,57 @@
+﻿
+@model poe_progs_3.Models.modules
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<HTML>
+
+<head>
+
+</head>
+
+
+<body>
+
+    <h2>  number of hours spent on a module per week</h2>
+
+
+    <div class="raw ">
+        @using(Html.BeginForm("/index","Student",FormMethod.Post))
+        {
+            
+            <div class="form-group">
+
+                <lebel for="modulePerWeek"> modulePerWeek</lebel>
+                <input type="text" class="form-control" id="modulePerWeek" name="modulePerWeek"value="@Model.modulePerWeek"></input>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <lebel for="numberOfHours">numberOfHours</lebel>
+                <input type="text" class="form-control" id="numberOfHours" name="numberOfHours" value="@Model.numberOfHours"></input>
+
+            </div>
+
+        }
+
+
+        <div class="form-group">
+
+            <lebel for="total">total</lebel>
+            <input type="text" class="form-control" id="total" name="total" value="@Model.total"></input>
+
+        </div>
+        <button type="submit"class="btn btn-info "id="Add"value="Add">ok</>
+
+    </div>
+
+    <partial name="_Indexpartial"></partial>
+
+</body>s
+
+
+</HTML>
